@@ -16,4 +16,4 @@ end
 
 puts main()
 
-#'ruby args_handler.rb '{"test":"r"}' --function create_users'
+#'ruby lambda_handler.rb '{"test":"r"}' --function create_users'
