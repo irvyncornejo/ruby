@@ -1,7 +1,7 @@
 require "logger"
 require 'json'
 
-require_relative 'users/create_user'
+require_relative 'users/entry_point'
 require_relative 'utils/utils'
 
 @log = Logger.new(STDOUT)
@@ -10,7 +10,7 @@ require_relative 'utils/utils'
 def main
     args = get_params()
     {
-        "create_users" => lambda  { create_users args[0] }
+        "create_users" => lambda  { create_users_handler(event=args[0]) }
     }["#{args[1]}"].call
 end
 

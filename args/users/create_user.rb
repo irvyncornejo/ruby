@@ -1,3 +1,6 @@
-def create_users(context)
-    puts context
+
+class Users
+    def create_user(event)
+        puts event
+    end
 end
